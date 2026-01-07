@@ -1,0 +1,55 @@
+navLinks:
+  - href: "/"
+    title: "Home"
+  - href: "/about"
+    title: "About"
+  - href: "/projects"
+    title: "Projects"
+  - href: "/articles"
+    title: "Articles"
+
+socialLinks:
+  - href: "https://leetcode.com/u/Anonymous5993"
+    platform: "LeetCode"
+    icon: "LeetCodeIcon"
+  - href: "https://github.com/akarthikbunny"
+    platform: "Github"
+    icon: "GithubIcon"
+  - href: "https://linkedin.com/in/akarthikbunny"
+    platform: "LinkedIn"
+    icon: "LinkedInIcon"
+
+logo:
+  backgroundColor: "#1b1b1b"
+  hoverColors: 
+    - "#121212"
+    - "rgba(131,58,180,1)"
+    - "rgba(253,29,29,1)"
+    - "rgba(252,176,69,1)"
+    - "rgba(131,58,180,1)"
+    - "#121212"
+
+footer:
+  copyright: "© All Rights Reserved."
+  credit: "Build With"
+  creditPost: "by"
+  creditLinkText: "Bunny"
+  creditLink: "/"
+  contactLinkText: "Say Hello"
+  contactLink: "mailto:arigekarthik36@gmail.com"
+
+metadata:
+  icon: "/favicon.ico"
+  viewport: "width=device-width, initial-scale=1"
+  home:
+    title: "Bunny's Portfolio"
+    description: "any description"
+  about:
+    title: "Bunny | About Page"
+    description: "any description"
+  projects:
+    title: "Bunny | Projects Page"
+    description: "any description"
+  articles:
+    title: "Bunny | Articles Page"
+    description: "any description"

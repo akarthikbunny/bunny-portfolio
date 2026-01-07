@@ -1,0 +1,58 @@
+featured:
+  - type: "Featured Project"
+    title: "Crypto Screener Application"
+    summary: "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
+    img: "/images/projects/crypto-project.jpg"
+    width: 1200
+    height: 1200
+    links:
+      - icon: GithubIcon
+        url: "/"
+      - icon: GlobeIcon
+        url: "/"
+  - type: "Featured Project"
+    title: "React Portfolio Website"
+    summary: "A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
+    img: "/images/projects/portfolio-cover-image.jpg"
+    width: 1200
+    height: 1200
+    links:
+      - icon: GithubIcon
+        url: "/"
+  - type: "Blog Website"
+    title: "DevDreaming"
+    summary: "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
+    img: "/images/projects/devdreaming.jpg"
+    width: 1200
+    height: 1200
+    links:
+      - icon: GlobeIcon
+        url: "/"
+
+other:
+  - type: "Website"
+    title: "React Portfolio Website"
+    img: "/images/projects/portfolio-cover-image.jpg"
+    width: 1200
+    height: 1200
+    links:
+      - icon: GlobeIcon
+        url: "/"
+  - type: "Website"
+    title: "Fashion Studio Website"
+    img: "/images/projects/fashion-studio-website.jpg"
+    width: 1200
+    height: 1200
+    links:
+      - icon: GithubIcon
+        url: "/"
+      - icon: GlobeIcon
+        url: "/"
+  - type: "Project"
+    title: "Crypto Screener Application"
+    img: "/images/projects/crypto-project.jpg"
+    width: 1200
+    height: 1200
+    links:
+      - icon: GithubIcon
+        url: "/"

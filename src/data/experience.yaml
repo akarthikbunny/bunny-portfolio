@@ -1,0 +1,23 @@
+- position: "Software Engineer"
+  company: "Google"
+  companyLink: "www.google.com"
+  time: "2024-Present"
+  address: "Mountain View, CA"
+  work: |
+    Worked on a team responsible for developing new features for Google's 
+    search engine, including improving the accuracy and relevance of search results and 
+    developing new tools for data analysis and visualization.
+
+- position: "Intern"
+  company: "Facebook"
+  companyLink: "www.facebook.com"
+  time: "Summer 2023"
+  address: "Menlo Park, CA"
+  work: "Worked on a team responsible for developing a new mobile app feature that allowed users to share shorter video content with their friends."
+
+- position: "Software Developer"
+  company: "Amazon"
+  companyLink: "www.amazon.com"
+  time: "2022-2023"
+  address: "Seattle, WA"
+  work: "Worked on a team responsible for developing a new mobile app feature that allowed users to share shorter video content with their friends."
