@@ -45,7 +45,7 @@ const Skills = ({ skillsData }) => {
 
                 {/* <AnimatePresence> */}
                 <AnimatePresence mode="wait">
-                    {skillsData && skillsData[category] && skillsData[category].map((skill, index) => (
+                    {skillsData && skillsData[category] && skillsData[category].map((skill) => (
                         <Skill
                             key={`${category}-${skill.name}`}
                             name={skill.name}
