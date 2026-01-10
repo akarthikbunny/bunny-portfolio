@@ -1,0 +1,58 @@
+name: Update LeetCode Rating
+
+on:
+  schedule:
+    # Runs at 00:00 IST every Friday (18:30 UTC Thursday)
+    - cron: '30 18 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-rating:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update LeetCode Rating
+        run: |
+          USERNAME=$(grep "leetcode.com" src/data/site.yaml | sed -n 's/.*leetcode\.com\/u\/\([^"]*\).*/\1/p')
+          if [ -z "$USERNAME" ]; then
+            echo "Username not found in src/data/site.yaml"
+            exit 1
+          fi
+          echo "Found username: $USERNAME"
+
+          QUERY='{"query":"query userContestRankingInfo($username: String!) { userContestRanking(username: $username) { rating } }","variables":{"username":"'$USERNAME'"}}'
+          RESPONSE=$(curl -s -X POST -H "Content-Type: application/json" -d "$QUERY" https://leetcode.com/graphql)
+          
+          RATING=$(echo $RESPONSE | jq -r '.data.userContestRanking.rating')
+          
+          if [ "$RATING" == "null" ] || [ -z "$RATING" ]; then
+            echo "Rating not found in response: $RESPONSE"
+            exit 1
+          fi
+          echo "Raw Rating: $RATING"
+
+          ROUNDED=$(printf "%.0f" $RATING)
+          echo "Rounded Rating: $ROUNDED"
+
+          sed -i "s/contest: [0-9]*/contest: $ROUNDED/" src/data/biography.yaml
+          
+          if git diff --quiet src/data/biography.yaml; then
+            echo "No changes to biograhy.yaml"
+          else
+            echo "Updated biography.yaml"
+          fi
+
+      - name: Commit and Push
+        run: |
+          if ! git diff --quiet src/data/biography.yaml; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add src/data/biography.yaml
+            git commit -m "chore: update leetcode rating"
+            git push
+          fi
