@@ -43,8 +43,8 @@ const Skills = ({ skillsData }) => {
                     {category}
                 </motion.div>
 
-                {/* <AnimatePresence> */}
-                <AnimatePresence mode="wait">
+                {/* <AnimatePresence mode="wait"> */}
+                <AnimatePresence>
                     {skillsData && skillsData[category] && skillsData[category].map((skill) => (
                         <Skill
                             key={`${category}-${skill.name}`}
